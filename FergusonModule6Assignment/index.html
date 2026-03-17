@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8" />
+    <title>Gym Member Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/forms.css" />
+    <link rel="stylesheet" href="css/tables.css" />
+</head>
+<body>
+
+<header>
+    <h1>Gym Member Manager</h1>
+</header>
+
+<main>
+
+    <!-- Navigation -->
+    <div class="nav-buttons">
+        <button id="showCreateViewBtn" type="button">Add / Edit Member</button>
+        <button id="showListViewBtn" type="button">View Members</button>
+    </div>
+
+    <!-- Create/edit Form-->
+    <section id="formView">
+        <h2 id="formTitle">Add Gym Member</h2>
+
+        <form id="memberForm">
+
+            <label>User Name (2 digits + 4–6 letters)
+                <input type="text" id="userNameInput">
+                <span class="error" id="userNameError"></span>
+            </label>
+
+            <label>First Name
+                <input type="text" id="firstNameInput">
+                <span class="error" id="firstNameError"></span>
+            </label>
+
+            <label>Last Name
+                <input type="text" id="lastNameInput">
+                <span class="error" id="lastNameError"></span>
+            </label>
+
+            <label>Enrollment Date
+                <input type="date" id="enrollmentDateInput">
+                <span class="error" id="enrollmentDateError"></span>
+            </label>
+
+            <label>Cancellation Date
+                <input type="date" id="cancellationDateInput">
+                <span class="error" id="cancellationDateError"></span>
+            </label>
+
+            <div class="access-toggle-group">
+
+                <label for="poolAccessInput" class="visually-hidden">Pool Access</label>
+                <button type="button" class="access-toggle" data-target="#poolAccessInput">
+                    Pool Access
+                </button>
+                <input type="checkbox" id="poolAccessInput" hidden>
+
+                <label for="spaAccessInput" class="visually-hidden">Spa Access</label>
+                <button type="button" class="access-toggle" data-target="#spaAccessInput">
+                    Spa Access
+                </button>
+                <input type="checkbox" id="spaAccessInput" hidden>
+
+            </div>
+
+            <input type="hidden" id="editModeId">
+
+            <button type="submit" id="saveMemberBtn">Save</button>
+            <button type="button" id="cancelEditBtn">Cancel</button>
+        </form>
+    </section>
+
+    <!-- List View -->
+    <section id="listView" class="hidden">
+        <h2>Member List</h2>
+
+        <!-- Filters -->
+        <div class="filters">
+            <label>Filter ID <input type="text" id="filterIdInput" class="filter-input"></label>
+            <label>Filter User Name <input type="text" id="filterUserNameInput" class="filter-input"></label>
+            <label>Filter First Name <input type="text" id="filterFirstNameInput" class="filter-input"></label>
+            <label>Filter Last Name <input type="text" id="filterLastNameInput" class="filter-input"></label>
+
+            <label><input type="checkbox" id="filterPoolAccess" class="filter-input"> Pool Only</label>
+            <label><input type="checkbox" id="filterSpaAccess" class="filter-input"> Spa Only</label>
+        </div>
+
+        <!-- Members Table -->
+        <table id="membersTable">
+            <thead>
+            <tr>
+                <th class="sortable" data-sort="id">ID</th>
+                <th class="sortable" data-sort="userName">User Name</th>
+                <th class="sortable" data-sort="firstName">First</th>
+                <th class="sortable" data-sort="lastName">Last</th>
+                <th class="sortable" data-sort="enrollmentDate">Enroll</th>
+                <th class="sortable" data-sort="cancellationDate">Cancel</th>
+                <th>Pool</th>
+                <th>Spa</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody id="membersTableBody"></tbody>
+        </table>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <button id="prevPageBtn">Prev</button>
+            <span id="pageInfo"></span>
+            <button id="nextPageBtn">Next</button>
+        </div>
+    </section>
+
+</main>
+
+<footer>Jake Ferguson | 2025</footer>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="js/models.js"></script>
+<script src="js/seed.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/controller.js"></script>
+
+</body>
+</html>

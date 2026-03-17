@@ -1,0 +1,119 @@
+/* TABLE CARD */
+#listView {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+#listView h2 {
+    color: #2b6cb0;
+    margin-top: 0;
+}
+
+/* FILTERS */
+.filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.filters label {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.filters input[type="text"] {
+    width: 100%;
+    padding: 0.45rem;
+    margin-top: 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+thead {
+    background: #2b6cb0;
+    color: white;
+}
+
+th, td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+tbody tr:hover {
+    background: #f7fafc;
+}
+
+th.sortable {
+    cursor: pointer;
+    user-select: none;
+    transition: 0.2s;
+}
+
+th.sortable:hover {
+    background: #2c5282;
+}
+
+/* CHECKMARK CELLS */
+td {
+    text-align: center;
+}
+
+/* ACTION BUTTONS */
+.actions button {
+    padding: 0.4rem 0.7rem;
+    margin-right: 0.3rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.actions button:first-child {
+    background: #3182ce;
+    color: white;
+}
+
+.actions button:first-child:hover {
+    background: #2b6cb0;
+}
+
+.actions button:last-child {
+    background: #e53e3e;
+    color: white;
+}
+
+.actions button:last-child:hover {
+    background: #c53030;
+}
+
+/* PAGINATION */
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.pagination button {
+    padding: 0.5rem 1rem;
+    background: #2b6cb0;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    background: #2c5282;
+}

@@ -1,0 +1,113 @@
+/* FORM CARD */
+#formView {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+#formTitle {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #2b6cb0;
+}
+
+/* LABELS */
+form label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* INPUTS */
+form input[type="text"],
+form input[type="date"] {
+    padding: 0.55rem;
+    margin-top: 0.25rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: border 0.2s;
+}
+
+form input:focus {
+    border-color: #2b6cb0;
+    outline: none;
+}
+
+/* CHECKBOX ROW */
+form label input[type="checkbox"] {
+    margin-right: 0.5rem;
+    transform: scale(1.3);
+}
+
+/* ERRORS */
+.error {
+    color: #d9534f;
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+/* BUTTONS */
+form button {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+#saveMemberBtn {
+    background: #2b6cb0;
+    color: white;
+}
+
+#saveMemberBtn:hover {
+    background: #2c5282;
+}
+
+#cancelEditBtn {
+    margin-top: 0.5rem;
+    background: #e2e8f0;
+}
+
+#cancelEditBtn:hover {
+    background: #cbd5e0;
+}
+
+.access-toggle-group {
+    display: flex;
+    gap: 1rem;
+    margin: 0.5rem 0 1rem;
+}
+
+.access-toggle {
+    padding: 0.6rem 1.2rem;
+    border: 2px solid #2b6cb0;
+    background: white;
+    color: #2b6cb0;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.access-toggle:hover {
+    background: #e2e8f0;
+}
+
+.access-toggle.active {
+    background: #2b6cb0;
+    color: white;
+}
+
+.visually-hidden {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
