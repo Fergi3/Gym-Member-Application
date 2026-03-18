@@ -2,6 +2,10 @@
 
 A front-end web application built with JavaScript, HTML, and CSS that allows users to manage gym member records through an interactive interface. This project simulates a real-world member management system with filtering, validation, and dynamic data handling.
 
+Watch a live Demo by clicking on the Youtube link below.
+
+https://youtu.be/1D7AqxkAXDk
+
 ---
 
 ## 🚀 Features
